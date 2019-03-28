@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class FrmGestionColor
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,33 +20,61 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.LsvColor = New System.Windows.Forms.ListView()
+        Me.ChIdColor = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChColor = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.BtnAgregar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'CheckBox1
+        'LsvColor
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(459, 231)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(100, 21)
-        Me.CheckBox1.TabIndex = 0
-        Me.CheckBox1.Text = "CheckBox1"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.LsvColor.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChIdColor, Me.ChColor})
+        Me.LsvColor.FullRowSelect = True
+        Me.LsvColor.GridLines = True
+        Me.LsvColor.Location = New System.Drawing.Point(2, 57)
+        Me.LsvColor.Name = "LsvColor"
+        Me.LsvColor.Size = New System.Drawing.Size(417, 359)
+        Me.LsvColor.TabIndex = 0
+        Me.LsvColor.UseCompatibleStateImageBehavior = False
+        Me.LsvColor.View = System.Windows.Forms.View.Details
         '
-        'Form1
+        'ChIdColor
+        '
+        Me.ChIdColor.Text = "Código Color"
+        Me.ChIdColor.Width = 100
+        '
+        'ChColor
+        '
+        Me.ChColor.Text = "Color"
+        Me.ChColor.Width = 300
+        '
+        'BtnAgregar
+        '
+        Me.BtnAgregar.Location = New System.Drawing.Point(13, 12)
+        Me.BtnAgregar.Name = "BtnAgregar"
+        Me.BtnAgregar.Size = New System.Drawing.Size(75, 39)
+        Me.BtnAgregar.TabIndex = 1
+        Me.BtnAgregar.Text = "Agregar"
+        Me.BtnAgregar.UseVisualStyleBackColor = True
+        '
+        'FrmGestionColor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.CheckBox1)
-        Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(420, 420)
+        Me.Controls.Add(Me.BtnAgregar)
+        Me.Controls.Add(Me.LsvColor)
+        Me.Name = "FrmGestionColor"
+        Me.Text = "Gestión Color"
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents LsvColor As ListView
+    Friend WithEvents ChIdColor As ColumnHeader
+    Friend WithEvents ChColor As ColumnHeader
+    Friend WithEvents BtnAgregar As Button
 End Class
