@@ -22,15 +22,21 @@ Partial Class FrmGestionColor
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.LsvColor = New System.Windows.Forms.ListView()
         Me.ChIdColor = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChColor = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.BtnAgregar = New System.Windows.Forms.Button()
+        Me.CmsMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CmsMenu.SuspendLayout()
         Me.SuspendLayout()
         '
         'LsvColor
         '
         Me.LsvColor.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChIdColor, Me.ChColor})
+        Me.LsvColor.ContextMenuStrip = Me.CmsMenu
         Me.LsvColor.FullRowSelect = True
         Me.LsvColor.GridLines = True
         Me.LsvColor.Location = New System.Drawing.Point(2, 57)
@@ -59,6 +65,25 @@ Partial Class FrmGestionColor
         Me.BtnAgregar.Text = "Agregar"
         Me.BtnAgregar.UseVisualStyleBackColor = True
         '
+        'CmsMenu
+        '
+        Me.CmsMenu.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.CmsMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.EliminarToolStripMenuItem})
+        Me.CmsMenu.Name = "CmsMenu"
+        Me.CmsMenu.Size = New System.Drawing.Size(133, 52)
+        '
+        'EditarToolStripMenuItem
+        '
+        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(132, 24)
+        Me.EditarToolStripMenuItem.Text = "Editar"
+        '
+        'EliminarToolStripMenuItem
+        '
+        Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(132, 24)
+        Me.EliminarToolStripMenuItem.Text = "Eliminar"
+        '
         'FrmGestionColor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -68,7 +93,9 @@ Partial Class FrmGestionColor
         Me.Controls.Add(Me.BtnAgregar)
         Me.Controls.Add(Me.LsvColor)
         Me.Name = "FrmGestionColor"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Gestión Color"
+        Me.CmsMenu.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -77,4 +104,7 @@ Partial Class FrmGestionColor
     Friend WithEvents ChIdColor As ColumnHeader
     Friend WithEvents ChColor As ColumnHeader
     Friend WithEvents BtnAgregar As Button
+    Friend WithEvents CmsMenu As ContextMenuStrip
+    Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
 End Class
