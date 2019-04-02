@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Public Class FrmGestionColor
 
-    Private Sub MostrarColor()
+    Public Sub MostrarColor()
         If Cn.State = ConnectionState.Open Then
             Cn.Close()
         End If
@@ -36,6 +36,11 @@ Public Class FrmGestionColor
 
     Private Sub FrmGestionColor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MostrarColor()
+
+    End Sub
+
+    Private Sub BtnAgregar_Click(sender As Object, e As EventArgs) Handles BtnAgregar.Click
+        FrmAgregarColor.ShowDialog()
 
     End Sub
 End Class

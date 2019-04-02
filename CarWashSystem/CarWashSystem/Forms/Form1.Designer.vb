@@ -26,10 +26,10 @@ Partial Class FrmGestionColor
         Me.LsvColor = New System.Windows.Forms.ListView()
         Me.ChIdColor = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChColor = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.BtnAgregar = New System.Windows.Forms.Button()
         Me.CmsMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BtnAgregar = New System.Windows.Forms.Button()
         Me.CmsMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -56,15 +56,6 @@ Partial Class FrmGestionColor
         Me.ChColor.Text = "Color"
         Me.ChColor.Width = 300
         '
-        'BtnAgregar
-        '
-        Me.BtnAgregar.Location = New System.Drawing.Point(13, 12)
-        Me.BtnAgregar.Name = "BtnAgregar"
-        Me.BtnAgregar.Size = New System.Drawing.Size(75, 39)
-        Me.BtnAgregar.TabIndex = 1
-        Me.BtnAgregar.Text = "Agregar"
-        Me.BtnAgregar.UseVisualStyleBackColor = True
-        '
         'CmsMenu
         '
         Me.CmsMenu.ImageScalingSize = New System.Drawing.Size(20, 20)
@@ -83,6 +74,15 @@ Partial Class FrmGestionColor
         Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
         Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(132, 24)
         Me.EliminarToolStripMenuItem.Text = "Eliminar"
+        '
+        'BtnAgregar
+        '
+        Me.BtnAgregar.Location = New System.Drawing.Point(13, 12)
+        Me.BtnAgregar.Name = "BtnAgregar"
+        Me.BtnAgregar.Size = New System.Drawing.Size(75, 39)
+        Me.BtnAgregar.TabIndex = 1
+        Me.BtnAgregar.Text = "Agregar"
+        Me.BtnAgregar.UseVisualStyleBackColor = True
         '
         'FrmGestionColor
         '
