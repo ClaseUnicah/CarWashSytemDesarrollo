@@ -114,6 +114,7 @@ Partial Class FrmModificarColor
         Me.Controls.Add(Me.BtnAplicar)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "FrmModificarColor"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmModificarColor"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

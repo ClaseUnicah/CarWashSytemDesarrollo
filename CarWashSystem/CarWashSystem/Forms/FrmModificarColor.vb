@@ -4,6 +4,8 @@ Public Class FrmModificarColor
         If ValidarTextBox() = True Then
             ActualizarColor()
             Limpiar()
+            FrmGestionColor.MostrarColor()
+            Close()
         End If
 
     End Sub
@@ -51,8 +53,6 @@ Public Class FrmModificarColor
 
                     MessageBox.Show("Registro modificado satisfactoriamente", "CarWashSystem", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 End With
-
-
             End Using
         Catch ex As Exception
             MessageBox.Show("Error al almacenar el registro" + ex.Message, "CarWashSystem", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -60,4 +60,6 @@ Public Class FrmModificarColor
             Cn.Close()
         End Try
     End Sub
+
+
 End Class

@@ -30,6 +30,8 @@ Partial Class FrmGestionColor
         Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BtnAgregar = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TxtBuscar = New System.Windows.Forms.TextBox()
         Me.CmsMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -39,9 +41,9 @@ Partial Class FrmGestionColor
         Me.LsvColor.ContextMenuStrip = Me.CmsMenu
         Me.LsvColor.FullRowSelect = True
         Me.LsvColor.GridLines = True
-        Me.LsvColor.Location = New System.Drawing.Point(2, 57)
+        Me.LsvColor.Location = New System.Drawing.Point(2, 77)
         Me.LsvColor.Name = "LsvColor"
-        Me.LsvColor.Size = New System.Drawing.Size(417, 359)
+        Me.LsvColor.Size = New System.Drawing.Size(527, 339)
         Me.LsvColor.TabIndex = 0
         Me.LsvColor.UseCompatibleStateImageBehavior = False
         Me.LsvColor.View = System.Windows.Forms.View.Details
@@ -84,12 +86,30 @@ Partial Class FrmGestionColor
         Me.BtnAgregar.Text = "Agregar"
         Me.BtnAgregar.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(109, 34)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(52, 17)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Buscar"
+        '
+        'TxtBuscar
+        '
+        Me.TxtBuscar.Location = New System.Drawing.Point(168, 34)
+        Me.TxtBuscar.Name = "TxtBuscar"
+        Me.TxtBuscar.Size = New System.Drawing.Size(316, 22)
+        Me.TxtBuscar.TabIndex = 3
+        '
         'FrmGestionColor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(420, 420)
+        Me.ClientSize = New System.Drawing.Size(538, 420)
+        Me.Controls.Add(Me.TxtBuscar)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BtnAgregar)
         Me.Controls.Add(Me.LsvColor)
         Me.Name = "FrmGestionColor"
@@ -97,6 +117,7 @@ Partial Class FrmGestionColor
         Me.Text = "Gestión Color"
         Me.CmsMenu.ResumeLayout(False)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -107,4 +128,6 @@ Partial Class FrmGestionColor
     Friend WithEvents CmsMenu As ContextMenuStrip
     Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label1 As Label
+    Friend WithEvents TxtBuscar As TextBox
 End Class

@@ -24,10 +24,10 @@ Partial Class FrmAgregarColor
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TxtIdColor = New System.Windows.Forms.TextBox()
         Me.TxtNombreColor = New System.Windows.Forms.TextBox()
+        Me.TxtIdColor = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnAplicar = New System.Windows.Forms.Button()
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.EpMensaje = New System.Windows.Forms.ErrorProvider(Me.components)
@@ -47,14 +47,22 @@ Partial Class FrmAgregarColor
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
-        'Label1
+        'TxtNombreColor
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(51, 37)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(56, 17)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Id Color"
+        Me.TxtNombreColor.Location = New System.Drawing.Point(184, 97)
+        Me.TxtNombreColor.Multiline = True
+        Me.TxtNombreColor.Name = "TxtNombreColor"
+        Me.TxtNombreColor.Size = New System.Drawing.Size(321, 37)
+        Me.TxtNombreColor.TabIndex = 0
+        '
+        'TxtIdColor
+        '
+        Me.TxtIdColor.Location = New System.Drawing.Point(184, 31)
+        Me.TxtIdColor.Multiline = True
+        Me.TxtIdColor.Name = "TxtIdColor"
+        Me.TxtIdColor.ReadOnly = True
+        Me.TxtIdColor.Size = New System.Drawing.Size(163, 34)
+        Me.TxtIdColor.TabIndex = 1
         '
         'Label2
         '
@@ -65,22 +73,14 @@ Partial Class FrmAgregarColor
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Nombre Color"
         '
-        'TxtIdColor
+        'Label1
         '
-        Me.TxtIdColor.Location = New System.Drawing.Point(184, 31)
-        Me.TxtIdColor.Multiline = True
-        Me.TxtIdColor.Name = "TxtIdColor"
-        Me.TxtIdColor.ReadOnly = True
-        Me.TxtIdColor.Size = New System.Drawing.Size(163, 34)
-        Me.TxtIdColor.TabIndex = 2
-        '
-        'TxtNombreColor
-        '
-        Me.TxtNombreColor.Location = New System.Drawing.Point(184, 97)
-        Me.TxtNombreColor.Multiline = True
-        Me.TxtNombreColor.Name = "TxtNombreColor"
-        Me.TxtNombreColor.Size = New System.Drawing.Size(321, 37)
-        Me.TxtNombreColor.TabIndex = 3
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(51, 37)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(56, 17)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Id Color"
         '
         'BtnAplicar
         '
